@@ -15,12 +15,16 @@ This is implemented as a command line tool, I felt this was the simplest and mos
 The entry point for the application is in **CustomerInvite.Console\Program.cs**
 
 Sample usage of the application is from the command line, for example:
-    dotnet CustomerInvite.dll fromUri https://gist.githubusercontent.com/brianw/19896c50afa89ad4dec3/raw/6c11047887a03483c50017c1d451667fd62a53ca/gistfile1.txt
+```
+dotnet CustomerInvite.dll fromUri https://gist.githubusercontent.com/brianw/19896c50afa89ad4dec3/raw/6c11047887a03483c50017c1d451667fd62a53ca/gistfile1.txt
+```
 
 I decided to pass the url of the customer list to the application from the command line so that the latest version is always used.
 
 With any command line tool having help is crucial for the user so I've added some basic explanation of the commands using some simple extensions from the **Microsoft.Extensions.CommandLineUtils** package. This can be seen by running the following command:
-    dotnet CustomerInvite.dll --help
+```
+dotnet CustomerInvite.dll --help
+```
 
 Rather than hardcoding the location of the office this is configurable within the appSettings.json configuration file.
 
